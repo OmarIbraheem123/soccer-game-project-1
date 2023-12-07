@@ -1,0 +1,42 @@
+@keyframes goaliemove {
+    
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(90vw);
+    }
+    100%{
+        transform: translate(0%);
+    }
+}
+
+
+#goal {
+    width: 100vw;
+    height: 200px;
+    background-color: black;
+    min-width: 300px;
+    min-height: 200px;
+  }
+
+  #goalie {
+    width: 100px;
+    height: 150px;
+    background-color: red;
+    animation: goaliemove 5s ease-in-out infinite;
+  }
+
+  #ball {
+    border-radius: 50%;
+    width:20px ;
+    height: 20px;
+    border:1px solid blue;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    z-index: 1000;
+    transition: top 4s  ;
+  }
