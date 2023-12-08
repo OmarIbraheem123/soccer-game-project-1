@@ -14,24 +14,22 @@
 
 #goal {
     width: 100vw;
-    height: 200px;
-    background-color: black;
+    height: 250px;
     min-width: 300px;
-    min-height: 200px;
+    min-height: 250px;
   }
 
   #goalie {
-    width: 100px;
-    height: 150px;
-    background-color: red;
     animation: goaliemove 5s ease-in-out infinite;
+
+    
   }
 
   #ball {
     border-radius: 50%;
-    width:20px ;
-    height: 20px;
-    border:1px solid blue;
+    width: 70px;px ;
+    height: 70px;
+    /* border:1px solid blue; */
     position: fixed;
     top: 80%;
     left: 50%;
@@ -39,4 +37,40 @@
     min-height: 20px;
     z-index: 1000;
     transition: top 4s  ;
+  }
+
+    
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  button {
+    background-image: linear-gradient(to right, #ff8000 0%, #ff5e00 100%);
+    border: none;
+    color: #fff;
+    box-shadow: 0 0 200px #eee;
+    padding: 15px 32px;
+    text-align: center;
+    transition: 0.5s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: 'Michroma', sans-serif;
+  }
+  #field {
+   background-image: url('../img/soccergrass.jpg');
+    border: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
   }

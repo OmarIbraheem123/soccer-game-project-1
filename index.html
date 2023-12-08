@@ -4,17 +4,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <script defer src="script.js"></script>
+  <title>Soccer game</title>
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+  <script defer src="js/main.js"></script>
 </head>
 
 <body>
 
-  <div id="goal"> &nbsp;</div>
-  <div id = "goalie"> &nbsp;</div>
-  <div id="ball"> &nbsp;</div>
+  
+  <img id="goal" src="./img/goal.png" alt="">
+    <img id = 'goalie'  src ="./img/goalie.png" alt="">
+    <img id = 'ball'  src ="./img/ball.png" alt="">
+   <div id="field">&nbsp;</div>
 
+    <div class="button-container">
+        <button class="button" id="easy-button">Easy</button>
+        <button class="button" id="normal-button">Normal</button>
+        <button class="button" id="hard-button">Hard</button>
+        <button class="button" id="reset-button">reset</button>
+      </div>
+      <div id = 'score'></div>
+      <div id = 'lives'></div>
 
 
 </body>
