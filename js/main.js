@@ -1,10 +1,9 @@
-
+// establishing variables 
 const ball = document.getElementById('ball')
 const goalie = document.getElementById('goalie')
 const goal = document.getElementById('goal')
 const scoreEl = document.getElementById('score')
 let collisionInterval
-// const livesEl = document.getElementById('lives')
 let score = 0 
 let lives = 3
  // Assign variable names to buttons
@@ -14,23 +13,24 @@ let lives = 3
  const hardBtn = document.getElementById('hard-button')
  const resetBtn = document.getElementById('reset-button')
 
-
+// make ball go back to original position
 const ballOrigin = ball.getBoundingClientRect();
 
-
+//goalie size
 goalie.style.width = '100px'
 
-
+// dont show reset buttton at start
 resetBtn.style.display = 'none'
 render()
-
+//easy button to show
   easyBtn.addEventListener('click', ()=>{
     easyBtn.style.display = 'none'
     normalBtn.style.display = 'none'
     hardBtn.style.display = 'none'
     speedEasy()
 
-  }) 
+  })
+  //normal button to show 
     normalBtn.addEventListener('click', ()=>{
         easyBtn.style.display = 'none'
         normalBtn.style.display = 'none'
@@ -38,12 +38,14 @@ render()
         speedNormal()
 
        })
+       //hard button to show
     hardBtn.addEventListener('click', ()=>{
         easyBtn.style.display = 'none'
         normalBtn.style.display = 'none'
         hardBtn.style.display = 'none'
         speedHard()
     })
+    //reset button to show 
     resetBtn.addEventListener('click', ()=>{
         resetBtn.style.display = 'none'
         easyBtn.style.display = 'block'
@@ -110,17 +112,17 @@ if(ball.getBoundingClientRect().y > goalie.getBoundingClientRect().y && ball.get
 }
 
 
-
+// Easy mode 
 function speedEasy (num) {
     ball.style.transition = 'top 5s'
     goalie.style.animation = 'goaliemove 6s ease-in-out infinite'
 }
-
+// Normal mode
 function speedNormal (num) {
     ball.style.transition = 'top 4s'
     goalie.style.animation = 'goaliemove 4s ease-in-out infinite'
 }
-
+// Hard mode 
 function speedHard (num) {
     ball.style.transition = 'top 3s'
     goalie.style.animation = 'goaliemove 3s ease-in-out infinite'
@@ -134,7 +136,7 @@ scoreEl.innerHTML = `
 <h2>${lives}<h2>`
 lost()
 }
-
+// what happens when you lose and lives hit 0
 function lost () {
     if (lives <= 0 ){
     resetBtn.style.display = 'block'}
@@ -151,19 +153,3 @@ function lost () {
 
 
 
-
-
-
-/*----- constants -----*/
-
-
-	/*----- state variables -----*/
-
-
-	/*----- cached elements  -----*/
-
-
-	/*----- event listeners -----*/
-
-
-	/*----- functions -----*/
